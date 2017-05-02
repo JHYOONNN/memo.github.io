@@ -1,0 +1,15 @@
+<% @posts.each do |post| %>
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card white darken-1">
+          <div class="card-content dark-text">
+            <span class="card-title"><%= post.title %></span>
+            <p><%= post.writer %></p>
+          </div>
+          <div class="card-action">
+            <a href="/posts/<%= post.id %>">글보기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>

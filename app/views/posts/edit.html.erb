@@ -1,0 +1,18 @@
+<form action="/posts/<%=@post.id %>" method='POST'>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <input type="hidden" name="_method" value="PATCH" />
+    <div class="input-field col s12">
+        <input value= "<%=@post.title %>" name="post[title]" id="title" type="text">
+        <label for="title">제목</label>
+    </div>
+    <div class="input-field col s12">
+        <input value= "<%=@post.writer %>" name="post[writer]" id="writer" type="text">
+        <label for="writer">글쓴이</label>
+    </div>
+    <div class="input-field col s12">
+        <textarea value="<%=@post.content %>" name="post[content]" id="textarea1" class="materialize-textarea"></textarea>
+        <label for="textarea1">내용</label>
+    </div>
+    <button class="btn waves-effect waves-light right" type="submit" name="action">글쓰기
+    </button>
+</form>
